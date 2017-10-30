@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class OnClose extends Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         return (
             <div>
@@ -13,3 +10,5 @@ class OnClose extends Component{
         );
     }
 }
+
+export default OnClose;

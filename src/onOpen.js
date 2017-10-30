@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class OnOpen extends Component{
-    constructor(props){
-        super(props);
-    }
     render(){
+        if(this.props.noRender){
+            return null;
+        }
         return (
             <div>
                 <p>now the toggle is open</p>
@@ -13,3 +13,5 @@ class OnOpen extends Component{
         );
     }
 }
+
+export default OnOpen;
