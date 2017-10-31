@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import OnOpen from './onOpen.js';
 import OnClose from './onClose.js';
+import TemperatureInput from "./temperatureInput";
 
 class Info extends Component{
     constructor(props){
@@ -10,11 +11,16 @@ class Info extends Component{
             num: 0,
             isToggleOn: true,
             val: '',
-            selectVal: 'comics'
+            selectVal: 'comics',
+            sex: true,
+            age: '',
+            scval: ''
         };
         this.handleClick = this.handleClick.bind(this);
         this.changeVal = this.changeVal.bind(this);
         this.changeSele = this.changeSele.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleScvalChange = this.handleScvalChange.bind(this);
     }
     componentDidMount(){
         this.timerID = setTimeout(
@@ -49,6 +55,29 @@ class Info extends Component{
         this.setState(state => ({
             isToggleOn: !state.isToggleOn
         }));
+    }
+    handleInputChange(e){
+        let tg = e.target;
+        let name = tg.name;
+        let value = tg.type === 'checkbox' ? tg.checked : tg.value;
+        this.setState({
+            [name]: value
+        })
+    }
+    toFahrenheit(val){
+        return (val * 9 / 5) + 32;
+    }
+    toCelsius(val){
+        return (val - 32) * 5 / 9;
+    }
+    handleScvalChange(scale,val){
+        if(scale === 'c'){
+            this.setState({scval:val});
+        }else if(scale === 'f'){
+            this.setState({
+                scval: this.toCelsius(val)
+            });
+        }
     }
     render(){
         const isToggleOn = this.state.isToggleOn;
@@ -99,6 +128,31 @@ class Info extends Component{
                     </select>
                 </label>
                 <p>your chooes is : {this.state.selectVal}</p>
+                <br/>
+                <h3>test multiple inputs</h3>
+                <label>
+                    you are man :
+                    <input type="checkbox" name="sex" checked={this.state.sex} onChange={this.handleInputChange}/>
+                </label>
+                <br/>
+                <label>
+                    your age is :
+                    <input type="number" name="age" value={this.state.age} onChange={this.handleInputChange}/>
+                </label>
+                <p>you are {this.state.sex ? 'man' : 'woman'}</p>
+                <p>your age is {this.state.age}</p>
+                <br/>
+                <h3>test state up</h3>
+                <p>输入一个温度值</p>
+                <TemperatureInput scale="c" scval={this.state.scval} onTemperatureChange={this.handleScvalChange}/>
+                <TemperatureInput scale="f" scval={this.toFahrenheit(this.state.scval)} onTemperatureChange={this.handleScvalChange}/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
         );
     }
