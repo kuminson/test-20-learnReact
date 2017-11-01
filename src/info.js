@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import OnOpen from './onOpen.js';
 import OnClose from './onClose.js';
 import TemperatureInput from "./temperatureInput";
+import FancyBorder from "./fancyBorder";
 
 class Info extends Component{
     constructor(props){
@@ -64,10 +65,10 @@ class Info extends Component{
             [name]: value
         })
     }
-    toFahrenheit(val){
+    static toFahrenheit(val){
         return (val * 9 / 5) + 32;
     }
-    toCelsius(val){
+    static toCelsius(val){
         return (val - 32) * 5 / 9;
     }
     handleScvalChange(scale,val){
@@ -147,6 +148,11 @@ class Info extends Component{
                 <TemperatureInput scale="c" scval={this.state.scval} onTemperatureChange={this.handleScvalChange}/>
                 <TemperatureInput scale="f" scval={this.toFahrenheit(this.state.scval)} onTemperatureChange={this.handleScvalChange}/>
                 <br/>
+                <h3>test composition and inheritance</h3>
+                <FancyBorder>
+                    <h4>welcome</h4>
+                    <p>this is form parent</p>
+                </FancyBorder>
                 <br/>
                 <br/>
                 <br/>
