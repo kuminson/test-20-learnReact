@@ -22,6 +22,8 @@ class Info extends Component{
         this.changeSele = this.changeSele.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleScvalChange = this.handleScvalChange.bind(this);
+        this.toFahrenheit = this.toFahrenheit.bind(this);
+        this.toCelsius = this.toCelsius.bind(this);
     }
     componentDidMount(){
         this.timerID = setTimeout(
@@ -65,10 +67,10 @@ class Info extends Component{
             [name]: value
         })
     }
-    static toFahrenheit(val){
+    toFahrenheit(val){
         return (val * 9 / 5) + 32;
     }
-    static toCelsius(val){
+    toCelsius(val){
         return (val - 32) * 5 / 9;
     }
     handleScvalChange(scale,val){

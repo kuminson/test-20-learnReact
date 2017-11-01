@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11ebe0cd-5306-48a9-bf38-709737ad57a1" name="默认" comment="add new test code">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fancyBorder.js" />
+    <list default="true" id="11ebe0cd-5306-48a9-bf38-709737ad57a1" name="默认" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/info.js" afterPath="$PROJECT_DIR$/src/info.js" />
     </list>
@@ -55,8 +54,8 @@
       <file leaf-file-name="info.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/info.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="-1053">
+              <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -265,7 +264,7 @@
       <workItem from="1509242557931" duration="10008000" />
       <workItem from="1509327790590" duration="15125000" />
       <workItem from="1509418068597" duration="2550000" />
-      <workItem from="1509524065687" duration="1585000" />
+      <workItem from="1509524065687" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="add new test code">
       <created>1509329112323</created>
@@ -281,11 +280,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509418336227</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add new test code">
+      <created>1509525858768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1509525858768</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44625000" />
+    <option name="totallyTimeSpent" value="45123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -745,8 +751,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/info.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        <state relative-caret-position="-1053">
+          <caret line="24" column="57" lean-forward="true" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
