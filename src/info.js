@@ -24,6 +24,7 @@ class Info extends Component{
         this.handleScvalChange = this.handleScvalChange.bind(this);
         this.toFahrenheit = this.toFahrenheit.bind(this);
         this.toCelsius = this.toCelsius.bind(this);
+        this.focus = this.focus.bind(this);
     }
     componentDidMount(){
         this.timerID = setTimeout(
@@ -72,6 +73,9 @@ class Info extends Component{
     }
     toCelsius(val){
         return (val - 32) * 5 / 9;
+    }
+    focus(){
+        this.textInput.focus();
     }
     handleScvalChange(scale,val){
         if(scale === 'c'){
@@ -156,6 +160,9 @@ class Info extends Component{
                     <p>this is form parent</p>
                 </FancyBorder>
                 <br/>
+                <h3>test refs</h3>
+                <input type="text" ref={(input) => {this.textInput = input}}/>
+                <button onClick={this.focus}>点我获得焦点</button>
                 <br/>
                 <br/>
                 <br/>
