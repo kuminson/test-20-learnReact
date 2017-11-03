@@ -25,6 +25,7 @@ class Info extends Component{
         this.toFahrenheit = this.toFahrenheit.bind(this);
         this.toCelsius = this.toCelsius.bind(this);
         this.focus = this.focus.bind(this);
+        this.handleShowVal = this.handleShowVal.bind(this);
     }
     componentDidMount(){
         this.timerID = setTimeout(
@@ -85,6 +86,9 @@ class Info extends Component{
                 scval: this.toCelsius(val)
             });
         }
+    }
+    handleShowVal(){
+        alert('the input is '+ this.unccInput.value);
     }
     render(){
         const isToggleOn = this.state.isToggleOn;
@@ -164,6 +168,9 @@ class Info extends Component{
                 <input type="text" ref={(input) => {this.textInput = input}}/>
                 <button onClick={this.focus}>点我获得焦点</button>
                 <br/>
+                <h3>test uncontrolled components</h3>
+                <input type="text" defaultValue="input a name" ref={unccInput => this.unccInput = unccInput}/>
+                <button onClick={this.handleShowVal}>show val</button>
                 <br/>
                 <br/>
                 <br/>
