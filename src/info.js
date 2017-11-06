@@ -172,6 +172,7 @@ class Info extends Component{
                 <input type="text" defaultValue="input a name" ref={unccInput => this.unccInput = unccInput}/>
                 <button onClick={this.handleShowVal}>show val</button>
                 <br/>
+                <h3>test react router</h3>
                 <br/>
                 <br/>
                 <br/>
